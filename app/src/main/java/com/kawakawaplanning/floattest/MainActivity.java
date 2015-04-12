@@ -8,6 +8,8 @@
 package com.kawakawaplanning.floattest;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -15,6 +17,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -27,12 +30,14 @@ public class MainActivity extends Activity implements View.OnClickListener{
     float scaled_px1 = 0;
     float scaled_px2 = 0;
     boolean menu_opened = false;
+    TextView item6Tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findItemView();
+        item6Tv.setText("ソースを見る。");
     }
 
     @Override
@@ -46,25 +51,27 @@ public class MainActivity extends Activity implements View.OnClickListener{
         iv_plus = (ImageView) findViewById(R.id.plus_ic);
         
         ll = new LinearLayout[6];
-        ll[0] = (LinearLayout) findViewById(R.id.item1);
-        ll[1] = (LinearLayout) findViewById(R.id.item2);
-        ll[2] = (LinearLayout) findViewById(R.id.item3);
-        ll[3] = (LinearLayout) findViewById(R.id.item4);
-        ll[4] = (LinearLayout) findViewById(R.id.item5);
-        ll[5] = (LinearLayout) findViewById(R.id.item6);
+        ll[0] = (LinearLayout)findViewById(R.id.item1);
+        ll[1] = (LinearLayout)findViewById(R.id.item2);
+        ll[2] = (LinearLayout)findViewById(R.id.item3);
+        ll[3] = (LinearLayout)findViewById(R.id.item4);
+        ll[4] = (LinearLayout)findViewById(R.id.item5);
+        ll[5] = (LinearLayout)findViewById(R.id.item6);
         
         img = new ImageView[6];
-        img[0] = (ImageView) findViewById(R.id.imgitem1);
-        img[1] = (ImageView) findViewById(R.id.imgitem2);
-        img[2] = (ImageView) findViewById(R.id.imgitem3);
-        img[3] = (ImageView) findViewById(R.id.imgitem4);
-        img[4] = (ImageView) findViewById(R.id.imgitem5);
-        img[5] = (ImageView) findViewById(R.id.imgitem6);
+        img[0] = (ImageView)findViewById(R.id.imgitem1);
+        img[1] = (ImageView)findViewById(R.id.imgitem2);
+        img[2] = (ImageView)findViewById(R.id.imgitem3);
+        img[3] = (ImageView)findViewById(R.id.imgitem4);
+        img[4] = (ImageView)findViewById(R.id.imgitem5);
+        img[5] = (ImageView)findViewById(R.id.imgitem6);
         
         for(int i = 0;i < img.length;i++ ) {
             img[i].setOnClickListener(this);
         }
         iv_plus.setOnClickListener(this);
+
+        item6Tv = (TextView)findViewById(R.id.item6Tv);
     }
 
     private void get_scale() {
@@ -128,6 +135,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case R.id.imgitem6:
                 menu_close();
                 Toast.makeText(MainActivity.this,"アイテム6が選択されました。",Toast.LENGTH_SHORT).show();
+                Uri uri = Uri.parse("https://github.com/KawakawaRitsuki/FloatTest");
+                Intent i = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(i);
                 menu_opened = false;
                 break;
             case R.id.plus_ic:
