@@ -49,7 +49,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private void findItemView() {
 
         iv_plus = (ImageView) findViewById(R.id.plus_ic);
-        
+
         ll = new LinearLayout[6];
         ll[0] = (LinearLayout)findViewById(R.id.item1);
         ll[1] = (LinearLayout)findViewById(R.id.item2);
@@ -57,7 +57,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         ll[3] = (LinearLayout)findViewById(R.id.item4);
         ll[4] = (LinearLayout)findViewById(R.id.item5);
         ll[5] = (LinearLayout)findViewById(R.id.item6);
-        
+
         img = new ImageView[6];
         img[0] = (ImageView)findViewById(R.id.imgitem1);
         img[1] = (ImageView)findViewById(R.id.imgitem2);
@@ -65,7 +65,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         img[3] = (ImageView)findViewById(R.id.imgitem4);
         img[4] = (ImageView)findViewById(R.id.imgitem5);
         img[5] = (ImageView)findViewById(R.id.imgitem6);
-        
+
         for(int i = 0;i < img.length;i++ ) {
             img[i].setOnClickListener(this);
         }

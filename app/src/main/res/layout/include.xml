@@ -1,8 +1,7 @@
-
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-android:layout_height="match_parent"
+    android:layout_height="match_parent"
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
@@ -249,62 +248,62 @@ android:layout_height="match_parent"
     </LinearLayout>
 
 
-<LinearLayout
-    android:id="@+id/item6"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:alpha="0"
-    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/item6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:orientation="horizontal">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/ic_mini"
-            android:id="@+id/imgitem6"
-            android:layout_gravity="right|bottom"
-            android:layout_margin="20dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="false"
-            android:layout_alignParentRight="true" />
-
-        <LinearLayout
-            android:orientation="vertical"
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_alignTop="@+id/imgitem6"
-            android:layout_toLeftOf="@+id/imgitem6"
-            android:layout_toStartOf="@+id/imgitem6"
-            android:layout_alignBottom="@+id/imgitem6">
+            android:layout_height="fill_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Item6"
-                android:id="@+id/item6Tv"
-                android:layout_alignWithParentIfMissing="false"
-                android:layout_alignBottom="@+id/imgitem6"
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_mini"
+                android:id="@+id/imgitem6"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignTop="@+id/imgitem6"
                 android:layout_toLeftOf="@+id/imgitem6"
                 android:layout_toStartOf="@+id/imgitem6"
-                android:gravity="center"
-                android:layout_gravity="right" />
-        </LinearLayout>
+                android:layout_alignBottom="@+id/imgitem6">
 
-    </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Item6"
+                    android:id="@+id/item6Tv"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_alignBottom="@+id/imgitem6"
+                    android:layout_toLeftOf="@+id/imgitem6"
+                    android:layout_toStartOf="@+id/imgitem6"
+                    android:gravity="center"
+                    android:layout_gravity="right" />
+            </LinearLayout>
 
-</LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <ImageView
-    android:id="@+id/plus_ic"
-    android:layout_width="64dp"
-    android:layout_height="64dp"
-    android:alpha="0.9"
+        android:id="@+id/plus_ic"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:alpha="0.9"
         android:src="@drawable/ic_launcher"
-    android:layout_gravity="bottom|right"
-    android:layout_margin="20dp" />
+        android:layout_gravity="bottom|right"
+        android:layout_margin="20dp" />
 
-</FrameLayout>
+</FrameLayout> 
